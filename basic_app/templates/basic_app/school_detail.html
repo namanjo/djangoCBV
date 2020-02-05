@@ -2,12 +2,13 @@
 
 {% block body_block %}
 
-<div class="jumbotron">
-  <h1>Welcome to the school detail page</h1>
+  <div class="jumbotron">
+    <h1>Welcome to the school detail page</h1>
 
-  <p>Name: {{ school_detail.name }}</p>
-  <p>Principal: {{ school_detail.principal }}</p>
-  <p>Loction: {{ school_detail.location }}</p>
+    <p>Name: {{ school_detail.name }}</p>
+    <p>Principal: {{ school_detail.principal }}</p>
+    <p>Loction: {{ school_detail.location }}</p>
+    <p><a href="{% url 'basic_app:update' pk=school_detail.pk %}" class="btn btn-success">Update</a></p>
   </div>
 
   <div class="panel">

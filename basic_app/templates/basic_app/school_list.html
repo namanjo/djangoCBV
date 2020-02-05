@@ -2,11 +2,30 @@
 
 {% block body_block %}
 
-  <h1>Welcome to all the schools.</h1>
+  <div class="jumbotron">
+    <h1>Welcome to all the schools.</h1>
+  </div>
 
-  <ol>
+  <!-- <ol>
     {% for school in school_list %}
       <h3><li><a href="{{ school.id }}">{{ school.name }}</a></li></h3>
     {% endfor %}
-  </ol>
+  </ol> -->
+
+  <div class="row">
+    {% for school in school_list %}
+      <div class="col-sm-4 card-margin">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{ school.name }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ school.location }}</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="{{ school.id }}" class="btn btn-primary">Details</a>
+          </div>
+        </div>
+      </div>
+      <br>
+    {% endfor %}
+  </div>
+
 {% endblock %}
