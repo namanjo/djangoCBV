@@ -8,7 +8,8 @@
     <p>Name: {{ school_detail.name }}</p>
     <p>Principal: {{ school_detail.principal }}</p>
     <p>Loction: {{ school_detail.location }}</p>
-    <p><a href="{% url 'basic_app:update' pk=school_detail.pk %}" class="btn btn-success">Update</a></p>
+    <a href="{% url 'basic_app:update' pk=school_detail.pk %}" class="btn btn-success">Update</a> &nbsp;
+    <a href="{% url 'basic_app:delete' pk=school_detail.pk %}" class="btn btn-danger">Delete</a>
   </div>
 
   <div class="panel">
