@@ -3,7 +3,7 @@
 {% block body_block %}
 
 <div class="jumbotron">
-  <h1>Welcome to the choll detail page</h1>
+  <h1>Welcome to the school detail page</h1>
 
   <p>Name: {{ school_detail.name }}</p>
   <p>Principal: {{ school_detail.principal }}</p>
@@ -11,7 +11,7 @@
   </div>
 
   <div class="panel">
-    <h3>Students in school:</h3> 
+    <h3>Students in school:</h3>
     {% for student in school_detail.students.all %}
       <p>{{ student.stu_name }} who is {{ student.age }} years old.</p>
     {% endfor %}
